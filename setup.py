@@ -195,8 +195,8 @@ class MyServerFactory(WebSocketServerFactory):
                 
 
 if __name__ == '__main__':
-    factory = MyServerFactory(u"ws://0.0.0.0:80/royale/ws")
+    factory = MyServerFactory(u"ws://0.0.0.0:8080/royale/ws")
     # factory.setProtocolOptions(maxConnections=2)
 
-    reactor.listenTCP(80, factory)
+    reactor.listenTCP(8080, factory)
     reactor.run()
